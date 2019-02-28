@@ -1,13 +1,13 @@
 // app.js
 import angular from "angular";
-import MainController from "./main.controller";
+import TodoController from "./todo.controller";
 import TodoModule from "./todo/index.js";
 import DirectivesModule from "./directives/index.js";
 
 // our root module
 const AppModule = angular
   .module("app", [DirectivesModule, TodoModule])
-  .controller("MainController", MainController)
+  .controller("TodoController", TodoController)
   .run(() => console.log("Angular version " + angular.version.full))
   .filter("checkmark", function() {
     return function(input) {

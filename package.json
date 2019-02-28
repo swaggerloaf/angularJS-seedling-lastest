@@ -77,7 +77,7 @@
       "browser": true,
       "node": true,
       "es6": true,
-      "jest": false
+      "jasmine": true
     },
     "rules": {
       "no-debugger": "off",
