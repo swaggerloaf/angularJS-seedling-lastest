@@ -24,8 +24,9 @@
     "angular-toastr": "2.1.1",
     "blueimp-file-upload": "9.28.0",
     "bootstrap": "3.3.7",
-    "font-awesome": "4.7.0"
-    },
+    "font-awesome": "4.7.0",
+    "ui-router": "next"
+  },
   "devDependencies": {
     "@types/angular": "^1.6.54",
     "@types/angular-mocks": "1.7.0",
@@ -84,8 +85,7 @@
       "no-console": "off",
       "no-unused-vars": "warn"
     },
-    "settings": {
-    }
+    "settings": {}
   },
   "babel": {
     "presets": [
