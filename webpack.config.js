@@ -12,6 +12,7 @@ const publicUrl = '';
 
 module.exports = {
   mode: 'development',
+  target: 'web',
 
   // starting point
   entry: './src/index.js',
@@ -51,8 +52,8 @@ module.exports = {
   watch: false,
   devtool: 'source-map',
   devServer: {
-    historyApiFallback: true,
-    hot: false,
+    publicPath: '/dist/',
+    watchContentBase: true,
     port: 8080
   }
 };
