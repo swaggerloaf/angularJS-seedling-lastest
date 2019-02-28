@@ -8,18 +8,26 @@
     <title>AngularJS Seedling</title>
     <link
       rel="stylesheet"
-      href="node_modules/font-awesome/css/font-awesome.css"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.css"
+      href="node_modules/font-awesome/css/font-awesome.css"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div ng-controller="TodoController as todo" class="container-fluid">
-      
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="">At the movies</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <movie-list></movie-list>
     </div>
 
     <script type="text/javascript" src="dist/bundle.js"></script>
