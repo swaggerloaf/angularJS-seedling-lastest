@@ -1,3 +1,13 @@
+body {
+  background-color: lightgray;
+}
+
 .todo-completed {
   text-decoration: line-through;
+  background: #337ab7;
+}
+
+.todo-notcompleted {
+  text-decoration: none;
+  background: coral;
 }
