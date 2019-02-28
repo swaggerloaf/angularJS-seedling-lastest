@@ -1,7 +1,5 @@
-const TodoController = function($scope) {
+const TodoController = function($scope) {};
 
-};
-
-MainController.$inject = ['$scope'];
+TodoController.$inject = ['$scope'];
 
 export default TodoController;
