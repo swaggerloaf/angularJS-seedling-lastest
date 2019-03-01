@@ -14,15 +14,19 @@
       rel="stylesheet"
       href="node_modules/font-awesome/css/font-awesome.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body>
+  <body ng-app="app">
+    <div ng-controller="TodoController as todo">
+      Hi !!!
+      <pre>{{ todo.list }}</pre>
+    </div>
     <script
       type="text/javascript"
       src="/node_modules/angular/angular.js"
     ></script>
-    <script type="text/javascript" src="scr/app.module.js"></script>
-    <script type="text/javascript" src="scr/todo/todo.controller.js"></script>
+    <script type="text/javascript" src="./src/app.module.js"></script>
+    <script type="text/javascript" src="./src/todo/todo.controller.js"></script>
   </body>
 </html>

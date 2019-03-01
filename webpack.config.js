@@ -15,7 +15,7 @@ module.exports = {
   target: 'web',
 
   // starting point
-  entry: './src/index.js',
+  entry: './app/app.module.js',
   output: {
     path: path.join(__dirname, './dist'),
     filename: 'bundle.js'
@@ -24,11 +24,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /^(?!.*\.spec\.js$).*\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
@@ -52,7 +47,7 @@ module.exports = {
   watch: false,
   devtool: 'source-map',
   devServer: {
-    publicPath: '/src',
+    publicPath: '/app',
     watchContentBase: true,
     port: 8080
   }
