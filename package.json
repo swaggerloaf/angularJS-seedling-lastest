@@ -2,7 +2,7 @@
   "name": "angularJS-seedling-latest",
   "version": "1.0.0",
   "author": "@swaggerloaf",
-  "description": "Starter angularJS project using babel, webpack and bootstrap",
+  "description": "Starter angularJS project using webpack and bootstrap",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --watch",
     "build": "node_modules/.bin/webpack --progress",
@@ -13,19 +13,17 @@
   "license": "MIT",
   "repository": "https://github.com/swaggerloaf/angularJS-seedling-latest",
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
     "angular": "~1.7.7",
     "angular-animate": "~1.7.7",
     "angular-resource": "~1.7.7",
     "angular-sanitize": "~1.7.7",
     "angular-touch": "~1.7.7",
-    "angular-ui-router": "1.0.20",
+    "@uirouter/angularjs": "1.0.22",
     "angular-ui-bootstrap": "2.5.6",
     "angular-toastr": "2.1.1",
     "blueimp-file-upload": "9.28.0",
     "bootstrap": "3.3.7",
-    "font-awesome": "4.7.0",
-    "ui-router": "next"
+    "font-awesome": "4.7.0"
   },
   "devDependencies": {
     "@types/angular": "^1.6.54",
@@ -33,23 +31,10 @@
     "@types/angular-resource": "1.5.15",
     "@types/angular-animate": "1.5.10",
     "angular-mocks": "1.7.7",
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-proposal-class-properties": "7.3.3",
-    "@babel/plugin-syntax-dynamic-import": "7.2.0",
-    "@babel/plugin-transform-runtime": "7.2.0",
-    "@babel/register": "7.0.0",
-    "babel-eslint": "~10.0.1",
-    "babel-loader": "~8.0.5",
-    "@babel/preset-env": "^7.3.4",
     "eslint": "^5.14.1",
     "eslint-plugin-import": "2.16.0",
-    "file-loader": "~3.0.1",
-    "html-loader": "^0.5.5",
     "prettier": "^1.16.4",
-    "style-loader": "0.23.1",
-    "css-loader": "2.1.0",
     "sass-loader": "7.1.0",
-    "url-loader": "1.1.2",
     "webpack": "4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1",
@@ -63,18 +48,9 @@
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
-      "plugin:react/recommended",
       "plugin:import/errors",
       "plugin:import/warnings"
     ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
     "env": {
       "browser": true,
       "node": true,
@@ -87,16 +63,6 @@
       "no-unused-vars": "warn"
     },
     "settings": {}
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "@babel/plugin-syntax-dynamic-import",
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-transform-runtime"
-    ]
   },
   "keywords": [
     "babel",

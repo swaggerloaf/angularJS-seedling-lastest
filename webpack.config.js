@@ -52,7 +52,7 @@ module.exports = {
   watch: false,
   devtool: 'source-map',
   devServer: {
-    publicPath: '/dist/',
+    publicPath: '/src',
     watchContentBase: true,
     port: 8080
   }
