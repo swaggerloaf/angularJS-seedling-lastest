@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>AngularJS Seedling</title>
+    <title>AngularJS Seedling Latest</title>
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.css"
@@ -18,15 +18,16 @@
   </head>
 
   <body ng-app="app">
-    <div ng-controller="TodoController as todo">
-      Hi !!!
-      <pre>{{ todo.list }}</pre>
-    </div>
-    <script
-      type="text/javascript"
-      src="/node_modules/angular/angular.js"
-    ></script>
-    <script type="text/javascript" src="./src/app.module.js"></script>
-    <script type="text/javascript" src="./src/todo/todo.controller.js"></script>
+    <simple-example></simple-example>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- // application files -->
+    <script src="./src/app.module.js"></script>
+    <script src="./src/todo/simple-example.component.js"></script>
   </body>
 </html>
