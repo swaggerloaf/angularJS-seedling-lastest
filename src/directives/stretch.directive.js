@@ -1,4 +1,4 @@
-const stretch = function() {
+function stretch() {
   return {
     restrict: 'A',
     link: function(scope, element, attrs) {
@@ -9,7 +9,4 @@ const stretch = function() {
         event.target.value = 'brian';
       });
     }
-  };
-};
-
-export default stretch;
+}

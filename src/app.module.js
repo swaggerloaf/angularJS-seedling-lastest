@@ -6,7 +6,7 @@
 
 // our root module
 angular
-  .module('app', [])
+  .module('app', ['ngRoute'])
   //.module('app', [DirectivesModule, ServicesModule, MovieModule])
   .run(() => console.log('Angular version ' + angular.version.full));
 // .filter('checkmark', function() {

@@ -4,8 +4,7 @@
   "author": "@swaggerloaf",
   "description": "Starter angularJS project using webpack and bootstrap",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --watch",
-    "build": "node_modules/.bin/webpack --progress",
+    "start": "python -m SimpleHTTPServer",
     "pretest": "yarn install",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run"
@@ -14,6 +13,7 @@
   "repository": "https://github.com/swaggerloaf/angularJS-seedling-latest",
   "dependencies": {
     "angular": "~1.7.7",
+    "angular-route": "~1.7.7",
     "angular-animate": "~1.7.7",
     "angular-resource": "~1.7.7",
     "angular-sanitize": "~1.7.7",
@@ -23,6 +23,7 @@
     "angular-toastr": "2.1.1",
     "blueimp-file-upload": "9.28.0",
     "bootstrap": "3.3.7",
+    "jquery": "3.3.1",
     "font-awesome": "4.7.0"
   },
   "devDependencies": {
