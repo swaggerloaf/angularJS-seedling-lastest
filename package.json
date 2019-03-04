@@ -4,10 +4,15 @@
   "author": "@swaggerloaf",
   "description": "Starter angularJS project using webpack and bootstrap",
   "scripts": {
+    "prestart": "yarn install",
     "start": "python -m SimpleHTTPServer",
     "pretest": "yarn install",
     "test": "karma start karma.conf.js",
-    "test-single-run": "karma start karma.conf.js --single-run"
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "update-webdriver": "webdriver-manager update --gecko false",
+    "preprotractor": "yarn run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js",
+    "update-index-async": "node --eval \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/lib/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=lib/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
   },
   "license": "MIT",
   "repository": "https://github.com/swaggerloaf/angularJS-seedling-latest",
@@ -43,10 +48,9 @@
     "webpack-dev-server": "^3.2.1",
     "karma": "^4.0.1",
     "protractor": "^5.4.2",
-    "jasmine-core": "^3.3.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^2.0.1",
-    "jasmine": "^3.3.1"
+    "jasmine-core": "3.3.0"
   },
   "eslintConfig": {
     "extends": [

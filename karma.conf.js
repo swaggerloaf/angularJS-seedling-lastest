@@ -1,17 +1,27 @@
 // Karma configuration
-// Generated on Tue Feb 26 2019 15:17:39 GMT-0500 (EST)
+// Generated on Mon Mar 04 2019 13:12:15 GMT-0500 (EST)
 
 module.exports = function(config) {
   config.set({
-    basePath: '',
+    // base path that will be used to resolve all patterns (eg. files, exclude)
+    basePath: './src',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
-    // list of files / patterns to load in the browser
-    files: ['dist/bundle.js', 'src/app.spec.js'],
+    files: [
+      '../node_modules/angular/angular.js',
+      '../node_modules/angular-mocks/angular-mocks.js',
+      '../node_modules/angular-route/angular-route.js',
+      './app.module.js',
+      //  './controllers/**/*.js',
+      './app.module.spec.js'
+
+      //'directives/**/*.js',
+      //'services/**/*.js'
+    ],
 
     // list of files / patterns to exclude
     exclude: [],
