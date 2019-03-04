@@ -1,14 +1,21 @@
-const notifyService = function($window) {
-  var msgs = [];
-  return function(msg) {
-    msgs.push(msg);
-    if (msgs.length === 2) {
-      $window.alert(msgs.join('\n'));
-      msgs = [];
-    }
-  };
-};
+(function() {
+  'use strict';
 
-notifyService.$inject = ['$window'];
+  angular.module('app').service('notifyService', notifyService);
 
-export default notifyService;
+  /** @ngInject */
+  function notifyService($window) {
+    this.fn = fn;
+
+    var msgs = [];
+    return function fn(msg) {
+      msgs.push(msg);
+      if (msgs.length === 2) {
+        $window.alert(msgs.join('\n'));
+        msgs = [];
+      }
+    };
+  }
+
+  notifyService.$inject = ['$window'];
+})();
