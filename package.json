@@ -6,6 +6,9 @@
   "scripts": {
     "prestart": "yarn install",
     "start": "python -m SimpleHTTPServer",
+    "generate-mock-data": "node buildScripts/generateMockData",
+    "prestart-mockapi": "npm run generate-mock-data",
+    "start-mockapi": "json-server --watch db.json --port 3001",
     "pretest": "yarn install",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",
@@ -29,8 +32,8 @@
     "angular-toastr": "2.1.1",
     "blueimp-file-upload": "9.28.0",
     "bootstrap": "~3.3.7",
-    "jquery": "3.3.1",
-    "font-awesome": "4.7.0"
+    "jquery": "~3.3.1",
+    "font-awesome": "~4.7.0"
   },
   "devDependencies": {
     "@types/angular": "^1.6.54",
@@ -39,7 +42,7 @@
     "@types/angular-resource": "1.5.15",
     "@types/angular-animate": "1.5.10",
     "angular-mocks": "1.7.7",
-    "eslint": "^5.15.0",
+    "eslint": "^5.15.1",
     "eslint-plugin-import": "2.16.0",
     "prettier": "^1.16.4",
     "sass-loader": "7.1.0",
