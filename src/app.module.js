@@ -6,7 +6,7 @@
 
 // our root module
 angular
-  .module('app', ['ngRoute'])
+  .module('app', ['ngRoute', 'ngMessages'])
   // .config([
   //   '$routeProvider',
   //   function config($routeProvider) {
